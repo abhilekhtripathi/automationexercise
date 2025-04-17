@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.drs.tests.ProductDetailsPageTest">
+      <class name="com.qa.drs.tests.SearchProductTest">
         <methods>
-          <include name="allProductHeading"/>
           <include name="tearDown"/>
+          <include name="doClickSerachField"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.qa.drs.tests.ProductDetailsPageTest -->
+      </class> <!-- com.qa.drs.tests.SearchProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

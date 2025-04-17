@@ -15,7 +15,9 @@ import com.qa.drs.pages.DashboardPgae;
 import com.qa.drs.pages.LoginPage;
 import com.qa.drs.pages.ProductDetailsPage;
 import com.qa.drs.pages.ProductListPage;
+import com.qa.drs.pages.SearchProduct;
 import com.qa.drs.pages.SignUpUserPage;
+import com.qa.drs.pages.SubscriptionPage;
 
 public class BaseTest
 
@@ -35,6 +37,8 @@ public class BaseTest
 	ProductDetailsPage productDetailsPage;
 	
 	ProductListPage productListPage;
+	SubscriptionPage subscriptionPage;
+	SearchProduct searchPage;
 
 	@BeforeTest
 
@@ -52,7 +56,9 @@ public class BaseTest
 		conatactPage= new ContactUsPage(driver);
 		productListPage = new ProductListPage(driver);
 		productDetailsPage = new ProductDetailsPage(driver);
-
+		searchPage = new SearchProduct(driver);
+		
+		subscriptionPage = new SubscriptionPage(driver);
 	}
 
 	@AfterTest
