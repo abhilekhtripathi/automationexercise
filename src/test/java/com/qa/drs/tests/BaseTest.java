@@ -9,10 +9,12 @@ import org.testng.annotations.BeforeTest;
 import com.qa.drs.Utils.AlertUtils;
 import com.qa.drs.Utils.JasonReader;
 import com.qa.drs.factory.DriverFactory;
+
 import com.qa.drs.pages.ContactUsPage;
 import com.qa.drs.pages.DashboardPgae;
 import com.qa.drs.pages.LoginPage;
-
+import com.qa.drs.pages.ProductDetailsPage;
+import com.qa.drs.pages.ProductListPage;
 import com.qa.drs.pages.SignUpUserPage;
 
 public class BaseTest
@@ -29,6 +31,10 @@ public class BaseTest
 	JasonReader jsonReader;
 	ContactUsPage conatactPage;
 	SignUpUserPage signUpUserPage;
+	
+	ProductDetailsPage productDetailsPage;
+	
+	ProductListPage productListPage;
 
 	@BeforeTest
 
@@ -44,7 +50,8 @@ public class BaseTest
 		jsonReader = new JasonReader();
 		dashBoard = new DashboardPgae(driver);
 		conatactPage= new ContactUsPage(driver);
-		
+		productListPage = new ProductListPage(driver);
+		productDetailsPage = new ProductDetailsPage(driver);
 
 	}
 

@@ -5,35 +5,36 @@ import org.openqa.selenium.WebDriver;
 
 import com.qa.drs.Utils.ElementUtil;
 
-public class DashboardPgae 
+public class DashboardPgae
 
 {
-    
+
 	/// 1 declare private driver
-			private WebDriver driver;
-			private ElementUtil eleUtil;
-			
-			
-			// 2 create constructor
+	private WebDriver driver;
+	private ElementUtil eleUtil;
 
-			public DashboardPgae(WebDriver driver) {
+	// 2 create constructor
 
-				this.driver = driver;
-				eleUtil = new ElementUtil(driver);
-			}
-	
-			
-			//Locator
-			 private By LogOutButton = By.xpath("//a[@href=\"/logout\"]");
-			 
-			 //action
-			 
-			 
-			 
-			 public void doClickLogOutBttn() {
-				 driver.findElement(LogOutButton).click();
-				 
-				 
-			 }
-	
+	public DashboardPgae(WebDriver driver) {
+
+		this.driver = driver;
+		eleUtil = new ElementUtil(driver);
+	}
+
+	// Locator
+	private By LogOutButton = By.xpath("//a[@href=\"/logout\"]");
+	private By productButton = By.xpath("//a[@href=\"/products\"]");
+
+	// action
+
+	public void doClickLogOutBttn() {
+		driver.findElement(LogOutButton).click();
+
+	}
+
+	public void doClickProductButton() {
+		driver.findElement(productButton).click();
+
+	}
+
 }
