@@ -23,15 +23,16 @@ public class SubscriptionPage {
 	}
 	
 	// 3.By Locators
-		private By AllProductHeading = By.xpath("//h2[normalize-space()='All Products']");
+		private By subscriptionEmailtxtField = By.xpath("//input[@id='susbscribe_email']");
+		private By rightArrowButton = By.xpath("//i[@class='fa fa-arrow-circle-o-right']");
 		
 		
 		
 		//actions 
 
-		public void doClickProductButton() {
-			//driver.findElement(productbutton).click();
-
+		public void doclickSubscriptionTxtField() {
+                   driver.findElement(subscriptionEmailtxtField).sendKeys("abhi@gmail.com");
+                   driver.findElement(rightArrowButton).click();
 		}
 
 }
